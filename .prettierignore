@@ -1,0 +1,9 @@
+# Files
+package-lock.json
+
+# Folders
+node_modules/
+.next/
+build/
+dist/
+out/
