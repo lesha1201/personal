@@ -11,9 +11,12 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "dayjs": "^1.11.9",
     "next": "13.4.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwind-merge": "^1.13.2",
+    "tailwind-variants": "^0.1.13"
   },
   "devDependencies": {
     "@types/node": "^20.2.5",

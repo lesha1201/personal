@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /*-- Colors --*/
+
+    color-scheme: dark;
+
+    /* Plain */
+    --color-black: 0 0 0;
+    --color-white: 255 255 255;
+
+    /* Base */
+    --color-base-bg: var(--color-black);
+    --color-base-text-strong: var(--color-white);
+    --color-base-text-weak: 212 212 212;
+    --color-base-border: 63 63 70;
+    --color-base-surface: 23 23 23;
+    --color-base-surface-text-strong: var(--color-base-text-strong);
+    --color-base-surface-text-weak: var(--color-base-text-weak);
+
+    /* Primary */
+    --color-primary-text: var(--color-base-text-strong);
+    --color-primary-border: var(--color-base-text-strong);
+    --color-primary-surface: var(--color-base-text-strong);
+    --color-primary-surface-text-strong: var(--color-base-bg);
+  }
+
+  body {
+    background-color: theme('colors.base.bg');
+    color: theme('colors.base.text-strong');
+  }
+}
+
+@layer utilities {
+  .focus-outline {
+    outline: 2px solid transparent;
+    outline-offset: 4px;
+  }
+
+  .focus-outline:focus-visible {
+    outline-color: theme('colors.base.text-strong');
+  }
+}
