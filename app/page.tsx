@@ -15,6 +15,7 @@ import {
   WritingPreview,
 } from './components';
 import { EMAIL, EXPERIENCE_YEARS, FULL_NAME } from './config';
+import { groupPostsByYear } from './content';
 import projectTourGuideImage from './tour-guide.jpg';
 
 const POSTS_PREVIEWS_COUNT = 3;
@@ -23,8 +24,7 @@ export default function Home() {
   const postsByYear = R.pipe(
     allPosts,
     R.take(POSTS_PREVIEWS_COUNT),
-    R.sortBy([x => new Date(x.date), 'desc']),
-    R.groupBy(x => new Date(x.date).getUTCFullYear()),
+    groupPostsByYear,
     R.toPairs,
   );
 
@@ -68,7 +68,7 @@ export default function Home() {
           </WritingGroup>
         ))}
 
-        <Button as={NextLink} href="#" variant="outlined">
+        <Button as={NextLink} href="/blog" variant="outlined">
           Read all
         </Button>
       </Section>

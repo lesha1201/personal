@@ -14,7 +14,7 @@ export function HeaderNavigation() {
         <HeaderNavigationLink as={NextLink} href="#">
           About
         </HeaderNavigationLink>
-        <HeaderNavigationLink as={NextLink} href="#">
+        <HeaderNavigationLink as={NextLink} href="/blog">
           Blog
         </HeaderNavigationLink>
         <HeaderNavigationLink as={NextLink} href="#">
