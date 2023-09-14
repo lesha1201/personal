@@ -1,0 +1,23 @@
+.pre {
+  @apply mb-4 mt-6 max-h-[40rem] overflow-auto rounded-lg border border-base-border py-4;
+}
+
+.pre > code {
+  counter-reset: line;
+}
+
+.pre [data-line] {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.pre [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+
+  display: inline-block;
+  width: 2ch;
+  margin-right: 1.5rem;
+  text-align: right;
+  color: #768390;
+}

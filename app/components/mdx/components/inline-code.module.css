@@ -1,0 +1,6 @@
+:not(pre) > .code {
+  padding: 0.1em 0.4em;
+  border-radius: theme(borderRadius.DEFAULT);
+  background-color: transparent;
+  border: 1px solid theme(colors.base.border);
+}

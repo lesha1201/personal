@@ -11,10 +11,13 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "contentlayer": "^0.3.4",
     "dayjs": "^1.11.9",
     "next": "13.4.4",
+    "next-contentlayer": "^0.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "remeda": "^1.26.0",
     "tailwind-merge": "^1.13.2",
     "tailwind-variants": "^0.1.13"
   },
@@ -32,6 +35,8 @@
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
+    "rehype-pretty-code": "^0.10.1",
+    "shiki": "^0.14.4",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.1.3"
   }

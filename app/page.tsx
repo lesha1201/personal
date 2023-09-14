@@ -1,4 +1,6 @@
+import { allPosts } from 'contentlayer/generated';
 import NextLink from 'next/link';
+import * as R from 'remeda';
 
 import { Button, Link } from '@/lib/ui';
 import {
@@ -15,7 +17,17 @@ import {
 import { EMAIL, EXPERIENCE_YEARS, FULL_NAME } from './config';
 import projectTourGuideImage from './tour-guide.jpg';
 
+const POSTS_PREVIEWS_COUNT = 3;
+
 export default function Home() {
+  const postsByYear = R.pipe(
+    allPosts,
+    R.take(POSTS_PREVIEWS_COUNT),
+    R.sortBy([x => new Date(x.date), 'desc']),
+    R.groupBy(x => new Date(x.date).getUTCFullYear()),
+    R.toPairs,
+  );
+
   return (
     <>
       <Section className="pb-3 pt-9 sm:pb-5">
@@ -39,29 +51,22 @@ export default function Home() {
       <Section className="gap-9">
         <SectionHeading>Writing</SectionHeading>
 
-        <WritingGroup>
-          <WritingGroupTitle>2023</WritingGroupTitle>
+        {postsByYear.map(([year, posts]) => (
+          <WritingGroup key={year}>
+            <WritingGroupTitle>{year}</WritingGroupTitle>
 
-          <WritingList>
-            <WritingPreview
-              date="May 27"
-              excerpt="Beautiful and mind-bending effects with WebGL Render Targets"
-              tags={['React', 'TypeScript']}
-            />
-
-            <WritingPreview
-              date="May 27"
-              excerpt="Beautiful and mind-bending effects with WebGL Render Targets"
-              tags={['React', 'TypeScript']}
-            />
-
-            <WritingPreview
-              date="May 27"
-              excerpt="Beautiful and mind-bending effects with WebGL Render Targets"
-              tags={['React', 'TypeScript']}
-            />
-          </WritingList>
-        </WritingGroup>
+            <WritingList>
+              {posts.map(post => (
+                <WritingPreview
+                  key={post.url}
+                  url={post.url}
+                  date={post.date}
+                  title={post.title}
+                />
+              ))}
+            </WritingList>
+          </WritingGroup>
+        ))}
 
         <Button as={NextLink} href="#" variant="outlined">
           Read all
