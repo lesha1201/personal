@@ -1,4 +1,3 @@
-import { allPosts } from 'contentlayer/generated';
 import NextLink from 'next/link';
 import * as R from 'remeda';
 
@@ -15,18 +14,19 @@ import {
   WritingPreview,
 } from './components';
 import { EMAIL, EXPERIENCE_YEARS, FULL_NAME } from './config';
-import { groupPostsByYear } from './content';
-import projectTourGuideImage from './tour-guide.jpg';
+import { getPinnedProjects, getPosts, groupPostsByYear } from './content';
 
 const POSTS_PREVIEWS_COUNT = 3;
+const PROJECTS_PREVIEWS_COUNT = 2;
 
 export default function Home() {
   const postsByYear = R.pipe(
-    allPosts,
-    R.take(POSTS_PREVIEWS_COUNT),
+    getPosts({ limit: POSTS_PREVIEWS_COUNT }),
     groupPostsByYear,
     R.toPairs,
   );
+
+  const projects = getPinnedProjects({ limit: PROJECTS_PREVIEWS_COUNT });
 
   return (
     <>
@@ -77,26 +77,18 @@ export default function Home() {
         <SectionHeading>Projects</SectionHeading>
 
         <ProjectGrid>
-          <ProjectPreview
-            title="Frontend Playground"
-            excerpt="It's a playground for trying new things in Frontend.
-                  Currently, I am trying to use the new Next.js app directory,
-                  serverless components, and Tailwind. I also did UI design and
-                  learned Figma quite a lot."
-            coverImage={projectTourGuideImage}
-          />
-
-          <ProjectPreview
-            title="Frontend Playground"
-            excerpt="It's a playground for trying new things in Frontend.
-                  Currently, I am trying to use the new Next.js app directory,
-                  serverless components, and Tailwind. I also did UI design and
-                  learned Figma quite a lot."
-            coverImage={projectTourGuideImage}
-          />
+          {projects.map(project => (
+            <ProjectPreview
+              key={project.url}
+              url={project.url}
+              title={project.title}
+              excerpt={project.excerpt}
+              coverImage={project.cover}
+            />
+          ))}
         </ProjectGrid>
 
-        <Button as={NextLink} href="#" variant="outlined">
+        <Button as={NextLink} href="/projects" variant="outlined">
           View all
         </Button>
       </Section>

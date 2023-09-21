@@ -17,8 +17,8 @@ export function HeaderNavigation() {
         <HeaderNavigationLink as={NextLink} href="/blog">
           Blog
         </HeaderNavigationLink>
-        <HeaderNavigationLink as={NextLink} href="#">
-          Project
+        <HeaderNavigationLink as={NextLink} href="/projects">
+          Projects
         </HeaderNavigationLink>
       </div>
 

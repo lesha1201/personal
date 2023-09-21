@@ -10,14 +10,14 @@ import { InlineCode } from './components/inline-code';
 const components: MDXComponents = {
   h2: ({ className, ...props }) => (
     <h2
-      className={tclsx('mb-8 mt-8 text-2xl font-bold', className)}
+      className={tclsx('mb-8 mt-8 text-2xl font-bold first:mt-0', className)}
       {...props}
     />
   ),
 
   h3: ({ className, ...props }) => (
     <h3
-      className={tclsx('mb-8 mt-8 text-xl font-bold', className)}
+      className={tclsx('mb-8 mt-8 text-xl font-bold first:mt-0', className)}
       {...props}
     />
   ),

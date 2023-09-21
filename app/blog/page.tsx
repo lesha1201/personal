@@ -16,7 +16,7 @@ export default function Blog() {
 
   return (
     <>
-      <Section className="flex gap-4 pb-3 pt-9 sm:pb-5">
+      <Section className="gap-4 pb-3 pt-9 sm:pb-5">
         <PageHeading>Blog</PageHeading>
       </Section>
 

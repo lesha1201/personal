@@ -53,6 +53,7 @@ module.exports = {
       },
     ],
     'unicorn/no-negated-condition': 'off',
+    'unicorn/no-array-callback-reference': 'off',
 
     'react/function-component-definition': [
       'error',

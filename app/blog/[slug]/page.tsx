@@ -37,14 +37,16 @@ export default function BlogPost({ params }: PageProps) {
 
   return (
     <article>
-      <Section className="flex gap-4 pb-3 pt-9 sm:pb-5">
+      <Section className="gap-4 pb-3 pt-9 sm:pb-5">
         <PageHeading>{post.title}</PageHeading>
         <time dateTime={post.date} className="text-sm">
           {dayjs(post.date).format('MMMM D, YYYY')}
         </time>
       </Section>
 
-      <MDXContent code={post.body.code} />
+      <Section className="block">
+        <MDXContent code={post.body.code} />
+      </Section>
     </article>
   );
 }

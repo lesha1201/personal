@@ -7,7 +7,7 @@ import { Box } from '../box';
 /*-- Styles --*/
 
 const chipLabel = tv({
-  base: 'truncate',
+  base: 'truncate text-sm',
 });
 
 /*-- Main --*/

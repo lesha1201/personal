@@ -20,11 +20,33 @@ export const Post = defineDocumentType(() => ({
   },
 }));
 
+export const Project = defineDocumentType(() => ({
+  name: 'Project',
+  filePathPattern: `projects/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+    date: { type: 'date', required: true },
+    excerpt: { type: 'string', required: true },
+    cover: { type: 'string', required: true },
+    stack: { type: 'list', of: { type: 'string' }, required: false },
+    github: { type: 'string', required: false },
+    demo: { type: 'string', required: false },
+    pinned: { type: 'boolean', required: false },
+  },
+  computedFields: {
+    url: {
+      type: 'string',
+      resolve: post => post._raw.flattenedPath,
+    },
+  },
+}));
+
 /* Source */
 
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Post],
+  documentTypes: [Post, Project],
   mdx: {
     rehypePlugins: [[rehypePrettyCode, { keepBackground: false }]],
   },

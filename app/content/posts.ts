@@ -1,4 +1,4 @@
-import { Post } from 'contentlayer/generated';
+import { allPosts, Post } from 'contentlayer/generated';
 import * as R from 'remeda';
 
 export function sortPostsByDate(
@@ -11,7 +11,14 @@ export function sortPostsByDate(
 export function groupPostsByYear(posts: Post[]) {
   return R.pipe(
     posts,
-    sortPostsByDate,
     R.groupBy(x => new Date(x.date).getUTCFullYear()),
   );
+}
+
+export type GetPostsOptions = {
+  limit?: number;
+};
+
+export function getPosts({ limit = Infinity }: GetPostsOptions = {}) {
+  return R.pipe(allPosts, sortPostsByDate, R.take(limit));
 }

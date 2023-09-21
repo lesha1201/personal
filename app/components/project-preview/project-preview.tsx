@@ -1,23 +1,29 @@
 import Image, { ImageProps } from 'next/image';
-import React from 'react';
+import NextLink from 'next/link';
 
 export type ProjectPreviewProps = {
+  url: string;
   title: string;
   excerpt: string;
   coverImage: ImageProps['src'];
 };
 
 export function ProjectPreview({
+  url,
   title,
   excerpt,
   coverImage,
 }: ProjectPreviewProps) {
   return (
-    <div className="group basis-1/2 rounded-xl border border-base-border">
+    <NextLink
+      href={url}
+      className="group basis-1/2 rounded-xl border border-base-border"
+    >
       <div className="bg-neutral-300 relative rounded-t-[inherit] pt-[56.4706%]">
         <Image
-          className="absolute inset-0 rounded-[inherit] grayscale group-hover:grayscale-0"
+          className="absolute inset-0 rounded-[inherit] grayscale transition-all group-hover:grayscale-0"
           src={coverImage}
+          fill
           alt={`Cover image of ${title}`}
         />
       </div>
@@ -26,6 +32,6 @@ export function ProjectPreview({
         <div className="mb-3 text-lg font-bold">{title}</div>
         <p className="text-base-text-weak">{excerpt}</p>
       </div>
-    </div>
+    </NextLink>
   );
 }
