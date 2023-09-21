@@ -8,5 +8,5 @@ module.exports = {
   singleQuote: true,
   bracketSameLine: false,
   printWidth: 80,
-  plugins: [require('prettier-plugin-tailwindcss')],
+  plugins: ['prettier-plugin-tailwindcss'],
 };
