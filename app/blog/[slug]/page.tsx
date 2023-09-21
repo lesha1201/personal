@@ -8,13 +8,13 @@ type PageProps = { params: { slug: string } };
 
 export const dynamicParams = false;
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return allPosts.map(post => ({
     slug: post._raw.flattenedPath.split('/').at(-1),
   }));
 }
 
-export async function generateMetadata({ params }: PageProps) {
+export function generateMetadata({ params }: PageProps) {
   const post = allPosts.find(post =>
     post._raw.flattenedPath.endsWith(params.slug),
   );

@@ -4,12 +4,17 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:unicorn/recommended',
     'next/core-web-vitals',
     'prettier',
   ],
   plugins: ['simple-import-sort', 'import'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: true,
+    tsconfigRootDir: __dirname,
+  },
   rules: {
     'import/no-cycle': 'error',
     'import/first': 'error',
@@ -63,17 +68,6 @@ module.exports = {
       },
     ],
 
-    '@typescript-eslint/no-empty-interface': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/no-empty-function': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      {
-        vars: 'all',
-        args: 'after-used',
-        ignoreRestSiblings: true,
-      },
-    ],
     '@typescript-eslint/ban-types': [
       'error',
       {
