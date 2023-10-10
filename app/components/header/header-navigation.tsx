@@ -11,7 +11,7 @@ export function HeaderNavigation() {
       <Logo as={NextLink} href="/" />
 
       <div className="ml-7 flex items-center gap-6 sm:ml-9">
-        <HeaderNavigationLink as={NextLink} href="#">
+        <HeaderNavigationLink as={NextLink} href="/about-me">
           About
         </HeaderNavigationLink>
         <HeaderNavigationLink as={NextLink} href="/blog">

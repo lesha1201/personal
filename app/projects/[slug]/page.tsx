@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 import { MDXContent, PageHeading, Section } from '@/app/components';
-import { Button, Chip, ChipLabel } from '@/lib/ui';
+import { Button, Chip, ChipGroup, ChipLabel } from '@/lib/ui';
 
 type PageProps = { params: { slug: string } };
 
@@ -58,13 +58,13 @@ export default function Project({ params }: PageProps) {
               <div className="mb-3 text-sm text-base-text-weak">
                 Technologies
               </div>
-              <div className="flex flex-wrap gap-4">
+              <ChipGroup>
                 {project.stack.map(item => (
                   <Chip key={item}>
                     <ChipLabel>{item}</ChipLabel>
                   </Chip>
                 ))}
-              </div>
+              </ChipGroup>
             </div>
           )}
 

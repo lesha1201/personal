@@ -10,4 +10,36 @@ export const EXPERIENCE_YEARS = Math.round(
   dayjs().diff(CAREER_START_DATE, 'year', true),
 );
 
-export const GITHUB_URL = 'https://github.com/lesha1201';
+export const GITHUB_USERNAME = 'lesha1201';
+export const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}`;
+
+export const TELEGRAM_USERNAME = 'lesha1201';
+export const TELEGRAM_URL = `https://t.me/${TELEGRAM_USERNAME}`;
+
+export const STACK = [
+  'TypeScript',
+  'Next.js',
+  'React',
+  'CSS-in-JS',
+  'Tailwind',
+  'vanilla-extract',
+  'Node.js',
+  'Elixir',
+  'Phoenix',
+  'GraphQL',
+  'SQL',
+  'Docker',
+  'Git',
+  'Jest',
+  'Playwright',
+];
+
+export const INTERESTS = [
+  'Gaming',
+  'Guitar',
+  'Foreign languages',
+  'Digital art',
+  'Traveling',
+];
+
+export const TIME_ZONE = 'UTC+3';

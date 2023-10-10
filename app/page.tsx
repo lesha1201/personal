@@ -43,7 +43,7 @@ export default function Home() {
           scalability.
         </p>
 
-        <Button as={NextLink} href="#">
+        <Button as={NextLink} href="/about-me">
           About me
         </Button>
       </Section>
@@ -98,7 +98,7 @@ export default function Home() {
 
         <p className="text-base-text-weak">
           Email me at{' '}
-          <Link href="#" variant="underline">
+          <Link href={`mailto:${EMAIL}`} variant="underline">
             {EMAIL}
           </Link>
         </p>

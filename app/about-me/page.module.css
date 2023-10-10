@@ -1,0 +1,35 @@
+.profileGrid {
+  display: grid;
+  grid-template-areas:
+    'title'
+    'image'
+    'description';
+}
+
+.profileGridTitle {
+  grid-area: title;
+}
+
+.profileGridImage {
+  grid-area: image;
+}
+
+.profileGridDescription {
+  grid-area: description;
+}
+
+@media (min-width: 640px) {
+  .profileGrid {
+    grid-template-areas:
+      'title title'
+      'description image';
+  }
+}
+
+@media (min-width: 768px) {
+  .profileGrid {
+    grid-template-areas:
+      'title image'
+      'description image';
+  }
+}
