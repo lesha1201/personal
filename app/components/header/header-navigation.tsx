@@ -2,7 +2,7 @@ import NextLink from 'next/link';
 import React from 'react';
 
 import { GITHUB_URL } from '@/app/config';
-import { GitHubIcon, Logo } from '@/lib/ui';
+import { GitHubIcon, IconButton, Logo } from '@/lib/ui';
 import { HeaderNavigationLink } from './header-navigation-link';
 
 export function HeaderNavigation() {
@@ -23,10 +23,14 @@ export function HeaderNavigation() {
       </div>
 
       <div className="ml-auto">
-        {/* TODO: use `IconButton` here */}
-        <HeaderNavigationLink href={GITHUB_URL} target="_blank">
+        <IconButton
+          as="a"
+          href={GITHUB_URL}
+          target="_blank"
+          paddingMode="outer"
+        >
           <GitHubIcon />
-        </HeaderNavigationLink>
+        </IconButton>
       </div>
     </nav>
   );
