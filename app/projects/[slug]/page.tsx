@@ -24,7 +24,14 @@ export function generateMetadata({ params }: PageProps) {
     notFound();
   }
 
-  return { title: project.title };
+  return {
+    title: project.title,
+    description: project.excerpt,
+    openGraph: {
+      title: project.title,
+      description: project.excerpt,
+    },
+  };
 }
 
 export default function Project({ params }: PageProps) {

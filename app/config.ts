@@ -10,6 +10,8 @@ export const EXPERIENCE_YEARS = Math.round(
   dayjs().diff(CAREER_START_DATE, 'year', true),
 );
 
+export const DESCRIPTION = `Software engineer mainly focused on frontend with about ${EXPERIENCE_YEARS} years of experience who always pays attention to details and thinks about the end users of a product.`;
+
 export const GITHUB_USERNAME = 'lesha1201';
 export const GITHUB_URL = `https://github.com/${GITHUB_USERNAME}`;
 

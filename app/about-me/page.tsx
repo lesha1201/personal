@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
 import NextLink from 'next/link';
 
@@ -30,6 +31,15 @@ import { getPinnedProjects } from '../content';
 import css from './page.module.css';
 
 const PROJECTS_PREVIEWS_COUNT = 2;
+
+const title = 'About';
+
+export const metadata: Metadata = {
+  title,
+  openGraph: {
+    title,
+  },
+};
 
 export default function AboutMe() {
   const projects = getPinnedProjects({ limit: PROJECTS_PREVIEWS_COUNT });

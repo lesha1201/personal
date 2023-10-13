@@ -23,7 +23,14 @@ export function generateMetadata({ params }: PageProps) {
     notFound();
   }
 
-  return { title: post.title };
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+    },
+  };
 }
 
 export default function BlogPost({ params }: PageProps) {

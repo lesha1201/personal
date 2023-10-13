@@ -1,4 +1,5 @@
 import { allPosts } from 'contentlayer/generated';
+import { Metadata } from 'next';
 import * as R from 'remeda';
 
 import {
@@ -10,6 +11,18 @@ import {
   WritingPreview,
 } from '../components';
 import { groupPostsByYear } from '../content';
+
+const title = 'Blog';
+const description = 'A collection of my written experience and thoughts.';
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+  },
+};
 
 export default function Blog() {
   const postsByYear = R.pipe(allPosts, groupPostsByYear, R.toPairs);

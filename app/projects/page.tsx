@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+
 import {
   PageHeading,
   ProjectGrid,
@@ -5,6 +7,18 @@ import {
   Section,
 } from '../components';
 import { getProjects } from '../content';
+
+const title = 'Projects';
+const description = "A list of side-projects I've worked on.";
+
+export const metadata: Metadata = {
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+  },
+};
 
 export default function Projects() {
   const projects = getProjects();
