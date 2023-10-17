@@ -7,7 +7,7 @@ import { Box } from '../box';
 /*-- Styles --*/
 
 const icon = tv({
-  base: 'inline-flex shrink-0 w-[1em] h-[1em]',
+  base: 'inline-flex h-[1em] w-[1em] shrink-0',
   variants: {
     size: {
       md: 'text-2xl',

@@ -7,7 +7,7 @@ import { Box } from '../box';
 /*-- Styles --*/
 
 const chip = tv({
-  base: 'bg-base-surface text-base-surface-text-weak inline-flex items-center rounded-sm px-2 py-1 text-sm sm:text-base transition select-none hover:text-base-surface-text-strong',
+  base: 'inline-flex select-none items-center rounded-sm bg-base-surface px-2 py-1 text-sm text-base-surface-text-weak transition hover:text-base-surface-text-strong sm:text-base',
 });
 
 /*-- Main --*/

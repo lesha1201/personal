@@ -7,14 +7,14 @@ import { Box } from '../box';
 /*-- Styles --*/
 
 const button = tv({
-  base: 'inline-flex items-center justify-center select-none whitespace-nowrap font-bold text-base bg-white text-black focus-outline px-5 py-4 transition leading-none border rounded border-transparent',
+  base: 'focus-outline inline-flex select-none items-center justify-center whitespace-nowrap rounded border border-transparent bg-white px-5 py-4 text-base font-bold leading-none text-black transition',
   variants: {
     variant: {
       filled: '',
       outlined: '',
     },
     disabled: {
-      true: 'opacity-50 pointer-events-none',
+      true: 'pointer-events-none opacity-50',
     },
     color: {
       primary: '',
@@ -29,13 +29,13 @@ const button = tv({
       variant: 'filled',
       color: 'primary',
       class:
-        'bg-primary-surface text-primary-surface-text-strong hover:bg-transparent hover:text-primary-text hover:border-primary-border',
+        'bg-primary-surface text-primary-surface-text-strong hover:border-primary-border hover:bg-transparent hover:text-primary-text',
     },
     {
       variant: 'outlined',
       color: 'primary',
       class:
-        'bg-transparent border-base-border text-primary-text hover:border-primary-border',
+        'border-base-border bg-transparent text-primary-text hover:border-primary-border',
     },
   ],
   defaultVariants: {

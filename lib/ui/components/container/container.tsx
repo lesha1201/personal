@@ -7,7 +7,7 @@ import { Box } from '../box';
 /*-- Styles --*/
 
 const container = tv({
-  base: 'mx-auto max-w-5xl w-full px-4 sm:px-8',
+  base: 'mx-auto w-full max-w-5xl px-4 sm:px-8',
 });
 
 /*-- Main --*/

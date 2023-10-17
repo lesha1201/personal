@@ -1,3 +1,4 @@
+/** @type {import('prettier').Config} */
 module.exports = {
   arrowParens: 'avoid',
   trailingComma: 'all',
@@ -9,4 +10,5 @@ module.exports = {
   bracketSameLine: false,
   printWidth: 80,
   plugins: ['prettier-plugin-tailwindcss'],
+  tailwindFunctions: ['tv'],
 };

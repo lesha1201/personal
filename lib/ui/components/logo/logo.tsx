@@ -7,7 +7,7 @@ import { Box } from '../box';
 /*-- Styles --*/
 
 const logo = tv({
-  base: 'text-primary-text text-base font-bold',
+  base: 'text-base font-bold text-primary-text',
 });
 
 /*-- Main --*/

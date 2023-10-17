@@ -7,7 +7,7 @@ import { Box } from '../box';
 /*-- Styles --*/
 
 const link = tv({
-  base: 'text-primary-text focus-outline rounded hover:underline',
+  base: 'focus-outline rounded text-primary-text hover:underline',
   variants: {
     variant: {
       underline: 'underline',
