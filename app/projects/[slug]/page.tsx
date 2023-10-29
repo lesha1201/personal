@@ -54,6 +54,8 @@ export default function Project({ params }: PageProps) {
           <Image
             className="rounded-lg"
             src={project.cover}
+            sizes="60rem"
+            quality={85}
             fill
             alt={`Cover image of ${project.title}`}
           />

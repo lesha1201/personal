@@ -23,6 +23,8 @@ export function ProjectPreview({
         <Image
           className="absolute inset-0 rounded-[inherit] grayscale transition-all group-hover:grayscale-0"
           src={coverImage}
+          sizes="31.25rem"
+          quality={80}
           fill
           alt={`Cover image of ${title}`}
         />
