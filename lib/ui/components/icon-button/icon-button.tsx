@@ -7,7 +7,7 @@ import { Box } from '../box';
 /*-- Styles --*/
 
 const iconButton = tv({
-  base: 'inline-flex select-none items-center justify-center rounded p-2 text-base transition hover:bg-base-surface',
+  base: 'inline-flex select-none items-center justify-center rounded p-2 text-base transition hover:bg-base-text-strong/[0.08]',
   variants: {
     /**
      * Specifies how `padding` should behave.

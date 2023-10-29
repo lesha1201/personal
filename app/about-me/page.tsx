@@ -15,6 +15,7 @@ import {
   PropertyValue,
   Section,
   SectionHeading,
+  WorkExperienceJob,
 } from '../components';
 import {
   EMAIL,
@@ -26,6 +27,7 @@ import {
   TELEGRAM_URL,
   TELEGRAM_USERNAME,
   TIME_ZONE,
+  WORK_EXPERIENCE,
 } from '../config';
 import { getPinnedProjects } from '../content';
 import css from './page.module.css';
@@ -95,55 +97,55 @@ export default function AboutMe() {
       <Section className="gap-9">
         <SectionHeading>Details</SectionHeading>
 
-        <div className="flex flex-col gap-7 sm:flex-row sm:gap-9 md:gap-11">
-          <div className="flex w-full shrink-0 flex-col gap-5 rounded-xl border border-base-border p-5 sm:w-72 sm:gap-6 sm:p-6 md:w-80">
-            <Property>
-              <PropertyLabel>Experience</PropertyLabel>
-              <PropertyValue>{EXPERIENCE_YEARS} years</PropertyValue>
-            </Property>
+        <div className="flex flex-col flex-wrap gap-7 min-[794px]:flex-row min-[794px]:gap-11">
+          <div className="flex flex-1 flex-col gap-7 min-[794px]:max-w-[21.5rem]">
+            <div className="flex w-full shrink-0 flex-col gap-5 rounded-xl border border-base-border p-5 sm:gap-6 sm:p-6">
+              <Property>
+                <PropertyLabel>Experience</PropertyLabel>
+                <PropertyValue>{EXPERIENCE_YEARS} years</PropertyValue>
+              </Property>
 
-            <Property>
-              <PropertyLabel>Time zone</PropertyLabel>
-              <PropertyValue>{TIME_ZONE}</PropertyValue>
-            </Property>
+              <Property>
+                <PropertyLabel>Time zone</PropertyLabel>
+                <PropertyValue>{TIME_ZONE}</PropertyValue>
+              </Property>
 
-            <Property>
-              <PropertyLabel>Email</PropertyLabel>
-              <PropertyValue
-                as={Link}
-                href={`mailto:${EMAIL}`}
-                variant="underline"
-              >
-                {EMAIL}
-              </PropertyValue>
-            </Property>
+              <Property>
+                <PropertyLabel>Email</PropertyLabel>
+                <PropertyValue
+                  as={Link}
+                  href={`mailto:${EMAIL}`}
+                  variant="underline"
+                >
+                  {EMAIL}
+                </PropertyValue>
+              </Property>
 
-            <Property>
-              <PropertyLabel>GitHub</PropertyLabel>
-              <PropertyValue
-                as={Link}
-                href={GITHUB_URL}
-                target="_blank"
-                variant="underline"
-              >
-                {GITHUB_USERNAME}
-              </PropertyValue>
-            </Property>
+              <Property>
+                <PropertyLabel>GitHub</PropertyLabel>
+                <PropertyValue
+                  as={Link}
+                  href={GITHUB_URL}
+                  target="_blank"
+                  variant="underline"
+                >
+                  {GITHUB_USERNAME}
+                </PropertyValue>
+              </Property>
 
-            <Property>
-              <PropertyLabel>Telegram</PropertyLabel>
-              <PropertyValue
-                as={Link}
-                href={TELEGRAM_URL}
-                target="_blank"
-                variant="underline"
-              >
-                {TELEGRAM_USERNAME}
-              </PropertyValue>
-            </Property>
-          </div>
+              <Property>
+                <PropertyLabel>Telegram</PropertyLabel>
+                <PropertyValue
+                  as={Link}
+                  href={TELEGRAM_URL}
+                  target="_blank"
+                  variant="underline"
+                >
+                  {TELEGRAM_USERNAME}
+                </PropertyValue>
+              </Property>
+            </div>
 
-          <div className="flex flex-col gap-7 sm:gap-9 md:gap-11">
             <DetailsGroup>
               <DetailsGroupTitle>Stack</DetailsGroupTitle>
               <ChipGroup>
@@ -164,6 +166,26 @@ export default function AboutMe() {
                   </Chip>
                 ))}
               </ChipGroup>
+            </DetailsGroup>
+          </div>
+
+          <div className="flex-1 min-[794px]:min-w-[23.75rem]">
+            <DetailsGroup>
+              <DetailsGroupTitle>Experience</DetailsGroupTitle>
+
+              <div className="flex flex-col gap-6">
+                {WORK_EXPERIENCE.map(job => (
+                  <WorkExperienceJob
+                    key={job.company}
+                    company={job.company}
+                    companyImage={job.image}
+                    position={job.position}
+                    startDate={job.startDate}
+                    endDate={job.endDate}
+                    description={job.description}
+                  />
+                ))}
+              </div>
             </DetailsGroup>
           </div>
         </div>

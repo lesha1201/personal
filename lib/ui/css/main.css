@@ -16,6 +16,7 @@
     --color-base-bg: var(--color-black);
     --color-base-text-strong: var(--color-white);
     --color-base-text-weak: 212 212 212;
+    --color-base-text-subtle: 163 163 163;
     --color-base-border: 63 63 70;
     --color-base-surface: 23 23 23;
     --color-base-surface-text-strong: var(--color-base-text-strong);

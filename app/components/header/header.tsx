@@ -29,7 +29,7 @@ export function Header() {
   return (
     <header
       className={tclsx(
-        'sticky top-0 z-20 flex h-16 border-b border-transparent bg-black/60 backdrop-blur',
+        'sticky top-0 z-20 flex h-16 border-b border-transparent bg-base-bg/60 backdrop-blur',
         isDistinct && 'border-base-border',
       )}
     >

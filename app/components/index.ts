@@ -9,6 +9,7 @@ export * from './project-preview';
 export * from './property';
 export * from './section';
 export * from './section-heading';
+export * from './work-experience-job';
 export * from './writing-group';
 export * from './writing-group-title';
 export * from './writing-list';

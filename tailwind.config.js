@@ -19,6 +19,7 @@ module.exports = {
         border: 'rgb(var(--color-base-border) / <alpha-value>)',
         'text-strong': 'rgb(var(--color-base-text-strong) / <alpha-value>)',
         'text-weak': 'rgb(var(--color-base-text-weak) / <alpha-value>)',
+        'text-subtle': 'rgb(var(--color-base-text-subtle) / <alpha-value>)',
         surface: 'rgb(var(--color-base-surface) / <alpha-value>)',
         'surface-text-strong':
           'rgb(var(--color-base-surface-text-strong) / <alpha-value>)',
