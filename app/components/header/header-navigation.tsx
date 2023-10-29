@@ -28,6 +28,7 @@ export function HeaderNavigation() {
           href={GITHUB_URL}
           target="_blank"
           paddingMode="outer"
+          aria-label="GitHub"
         >
           <GitHubIcon />
         </IconButton>
