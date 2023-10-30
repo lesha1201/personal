@@ -22,7 +22,10 @@ export function WritingPreview({
 }: WritingPreviewProps) {
   return (
     <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
-      <div className="text-neutral-400 whitespace-nowrap text-sm leading-7">
+      <div
+        suppressHydrationWarning
+        className="text-neutral-400 whitespace-nowrap text-sm leading-7"
+      >
         {dayjs(date).format('MMM DD')}
       </div>
       <div className="flex flex-col gap-3">

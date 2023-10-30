@@ -46,7 +46,7 @@ export default function BlogPost({ params }: PageProps) {
     <article>
       <Section className="gap-4 pb-3 pt-9 sm:pb-5">
         <PageHeading>{post.title}</PageHeading>
-        <time dateTime={post.date} className="text-sm">
+        <time suppressHydrationWarning dateTime={post.date} className="text-sm">
           {dayjs(post.date).format('MMMM D, YYYY')}
         </time>
       </Section>
