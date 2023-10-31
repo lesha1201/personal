@@ -1,5 +1,5 @@
 .pre {
-  @apply mb-4 mt-6 max-h-[40rem] overflow-auto rounded-lg border border-base-border py-4;
+  @apply mt-[1.65em] max-h-[40rem] overflow-auto rounded-lg border border-base-border py-4;
 }
 
 .pre > code {
@@ -9,6 +9,17 @@
 .pre [data-line] {
   padding-right: 1rem;
   padding-left: 1rem;
+}
+
+.pre [data-highlighted-line] {
+  background-color: theme(colors.base.text-strong / 0.1);
+  border-left: 1px solid theme(colors.base.text-strong);
+}
+
+.pre [data-highlighted-chars] {
+  border-radius: 0.25rem;
+  background-color: theme(colors.base.text-strong / 0.1);
+  box-shadow: 0 0 0 4px theme(colors.base.text-strong / 0.1);
 }
 
 .pre [data-line]::before {

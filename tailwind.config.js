@@ -18,6 +18,7 @@ module.exports = {
         bg: 'rgb(var(--color-base-bg) / <alpha-value>)',
         border: 'rgb(var(--color-base-border) / <alpha-value>)',
         'text-strong': 'rgb(var(--color-base-text-strong) / <alpha-value>)',
+        'text-light': 'rgb(var(--color-base-text-light) / <alpha-value>)',
         'text-weak': 'rgb(var(--color-base-text-weak) / <alpha-value>)',
         'text-subtle': 'rgb(var(--color-base-text-subtle) / <alpha-value>)',
         surface: 'rgb(var(--color-base-surface) / <alpha-value>)',
@@ -32,6 +33,12 @@ module.exports = {
         surface: 'rgb(var(--color-primary-surface) / <alpha-value>)',
         'surface-text-strong':
           'rgb(var(--color-primary-surface-text-strong) / <alpha-value>)',
+      },
+    },
+
+    extend: {
+      lineHeight: {
+        relaxed: '1.65',
       },
     },
   },

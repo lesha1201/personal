@@ -3,4 +3,5 @@
   border-radius: theme(borderRadius.DEFAULT);
   background-color: transparent;
   border: 1px solid theme(colors.base.border);
+  white-space: nowrap;
 }

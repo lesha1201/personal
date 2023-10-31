@@ -44,14 +44,18 @@ export default function BlogPost({ params }: PageProps) {
 
   return (
     <article>
-      <Section className="gap-4 pb-3 pt-9 sm:pb-5">
+      <Section className="m-auto max-w-3xl gap-4 pb-3 pt-9 sm:pb-5">
         <PageHeading>{post.title}</PageHeading>
-        <time suppressHydrationWarning dateTime={post.date} className="text-sm">
+        <time
+          suppressHydrationWarning
+          dateTime={post.date}
+          className="text-sm text-base-text-weak"
+        >
           {dayjs(post.date).format('MMMM D, YYYY')}
         </time>
       </Section>
 
-      <Section className="block">
+      <Section className="m-auto block max-w-3xl">
         <MDXContent code={post.body.code} />
       </Section>
     </article>

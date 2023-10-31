@@ -15,6 +15,7 @@
     /* Base */
     --color-base-bg: var(--color-black);
     --color-base-text-strong: var(--color-white);
+    --color-base-text-light: 229 229 229;
     --color-base-text-weak: 212 212 212;
     --color-base-text-subtle: 163 163 163;
     --color-base-border: 64 64 64;

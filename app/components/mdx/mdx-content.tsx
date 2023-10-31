@@ -10,14 +10,50 @@ import { InlineCode } from './components/inline-code';
 const components: MDXComponents = {
   h2: ({ className, ...props }) => (
     <h2
-      className={tclsx('mb-8 mt-8 text-2xl font-bold first:mt-0', className)}
+      className={tclsx(
+        'mt-12 text-2xl font-bold first:mt-0 sm:text-3xl',
+        className,
+      )}
       {...props}
     />
   ),
 
   h3: ({ className, ...props }) => (
     <h3
-      className={tclsx('mb-8 mt-8 text-xl font-bold first:mt-0', className)}
+      className={tclsx(
+        'mt-12 text-xl font-bold first:mt-0 sm:text-2xl',
+        className,
+      )}
+      {...props}
+    />
+  ),
+
+  h4: ({ className, ...props }) => (
+    <h4
+      className={tclsx(
+        'mt-12 text-lg font-bold first:mt-0 sm:text-xl',
+        className,
+      )}
+      {...props}
+    />
+  ),
+
+  h5: ({ className, ...props }) => (
+    <h5
+      className={tclsx(
+        'mt-12 text-base font-bold first:mt-0 sm:text-lg',
+        className,
+      )}
+      {...props}
+    />
+  ),
+
+  h6: ({ className, ...props }) => (
+    <h6
+      className={tclsx(
+        'mt-12 text-base font-bold text-base-text-subtle first:mt-0 sm:text-lg',
+        className,
+      )}
       {...props}
     />
   ),
@@ -25,29 +61,31 @@ const components: MDXComponents = {
   p: ({ className, ...props }) => (
     <p
       className={tclsx(
-        'mt-6 text-base text-base-text-weak sm:text-lg',
+        'mt-[1.65em] text-base/relaxed text-base-text-weak first:mt-0 sm:text-lg/relaxed',
         className,
       )}
       {...props}
     />
   ),
 
-  // TODO: use a color from the design system
   strong: ({ className, ...props }) => (
     <strong
-      className={tclsx('font-semibold text-[#e5e5e5]', className)}
+      className={tclsx('text-base-text-light font-semibold', className)}
       {...props}
     />
   ),
 
   em: ({ className, ...props }) => (
-    <em className={tclsx('font-medium text-[#e5e5e5]', className)} {...props} />
+    <em
+      className={tclsx('text-base-text-light font-medium', className)}
+      {...props}
+    />
   ),
 
   ul: ({ className, ...props }) => (
     <ul
       className={tclsx(
-        'my-6 list-inside list-disc text-base text-base-text-weak marker:text-base-text-strong sm:text-lg',
+        'my-[1.65em] list-inside list-disc text-base text-base-text-weak marker:text-base-text-strong sm:text-lg',
         className,
       )}
       {...props}
@@ -57,7 +95,7 @@ const components: MDXComponents = {
   ol: ({ className, ...props }) => (
     <ol
       className={tclsx(
-        'my-6 list-inside list-decimal text-base text-base-text-weak marker:text-base-text-strong sm:text-lg',
+        'my-[1.65em] list-inside list-decimal text-base text-base-text-weak marker:text-base-text-strong sm:text-lg',
         className,
       )}
       {...props}
@@ -70,7 +108,10 @@ const components: MDXComponents = {
 
   blockquote: ({ className, ...props }) => (
     <blockquote
-      className={tclsx('mt-6 border-l-2 pl-4 italic', className)}
+      className={tclsx(
+        'mt-[1.65em] border-l-2 pl-4 italic first:mt-0',
+        className,
+      )}
       {...props}
     />
   ),
