@@ -1,5 +1,6 @@
 import '@/lib/ui/css/main.css';
 
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -37,6 +38,8 @@ export default function RootLayout({
         <Header />
 
         <PageContainer>{children}</PageContainer>
+
+        <Analytics />
       </body>
     </html>
   );

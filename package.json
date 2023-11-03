@@ -12,6 +12,7 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
+    "@vercel/analytics": "^1.1.1",
     "contentlayer": "^0.3.4",
     "dayjs": "^1.11.10",
     "next": "13.5.2",
