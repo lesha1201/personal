@@ -2,22 +2,23 @@ import NextLink from 'next/link';
 import React from 'react';
 
 import { GITHUB_URL } from '@/app/config';
+import { to } from '@/app/routing';
 import { GitHubIcon, IconButton, Logo } from '@/lib/ui';
 import { HeaderNavigationLink } from './header-navigation-link';
 
 export function HeaderNavigation() {
   return (
     <nav className="flex w-full items-center">
-      <Logo as={NextLink} href="/" />
+      <Logo as={NextLink} href={to.home()} />
 
       <div className="ml-7 flex items-center gap-6 sm:ml-9">
-        <HeaderNavigationLink as={NextLink} href="/blog">
+        <HeaderNavigationLink as={NextLink} href={to.blog()}>
           Blog
         </HeaderNavigationLink>
-        <HeaderNavigationLink as={NextLink} href="/projects">
+        <HeaderNavigationLink as={NextLink} href={to.projects()}>
           Projects
         </HeaderNavigationLink>
-        <HeaderNavigationLink as={NextLink} href="/about-me">
+        <HeaderNavigationLink as={NextLink} href={to.aboutMe()}>
           About
         </HeaderNavigationLink>
       </div>

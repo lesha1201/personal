@@ -11,15 +11,11 @@ type PageProps = { params: { slug: string } };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return allProjects.map(project => ({
-    slug: project._raw.flattenedPath.split('/').at(-1),
-  }));
+  return allProjects.map(project => project.slug);
 }
 
 export function generateMetadata({ params }: PageProps) {
-  const project = allProjects.find(project =>
-    project._raw.flattenedPath.endsWith(params.slug),
-  );
+  const project = allProjects.find(project => project.slug === params.slug);
 
   if (!project) {
     notFound();
@@ -29,9 +25,7 @@ export function generateMetadata({ params }: PageProps) {
 }
 
 export default function Project({ params }: PageProps) {
-  const project = allProjects.find(project =>
-    project._raw.flattenedPath.endsWith(params.slug),
-  );
+  const project = allProjects.find(project => project.slug === params.slug);
 
   if (!project) {
     notFound();

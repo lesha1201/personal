@@ -6,6 +6,7 @@ import {
 } from '../components';
 import { getProjects } from '../content';
 import { getMetadata } from '../metadata';
+import { to } from '../routing';
 
 export const metadata = getMetadata({
   title: 'Projects',
@@ -25,8 +26,8 @@ export default function Projects() {
         <ProjectGrid>
           {projects.map(project => (
             <ProjectPreview
-              key={project.url}
-              url={project.url}
+              key={project.slug}
+              url={to.project(project.slug)}
               title={project.title}
               excerpt={project.excerpt}
               coverImage={project.cover}

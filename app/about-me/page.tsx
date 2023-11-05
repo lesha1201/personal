@@ -31,6 +31,7 @@ import {
 } from '../config';
 import { getPinnedProjects } from '../content';
 import { getMetadata } from '../metadata';
+import { to } from '../routing';
 import css from './page.module.css';
 
 const PROJECTS_PREVIEWS_COUNT = 2;
@@ -194,8 +195,8 @@ export default function AboutMe() {
         <ProjectGrid>
           {projects.map(project => (
             <ProjectPreview
-              key={project.url}
-              url={project.url}
+              key={project.slug}
+              url={to.project(project.slug)}
               title={project.title}
               excerpt={project.excerpt}
               coverImage={project.cover}
@@ -203,7 +204,7 @@ export default function AboutMe() {
           ))}
         </ProjectGrid>
 
-        <Button as={NextLink} href="/projects" variant="outlined">
+        <Button as={NextLink} href={to.projects()} variant="outlined">
           View all
         </Button>
       </Section>

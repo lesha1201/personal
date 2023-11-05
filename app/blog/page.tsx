@@ -11,6 +11,7 @@ import {
 } from '../components';
 import { groupPostsByYear } from '../content';
 import { getMetadata } from '../metadata';
+import { to } from '../routing';
 
 export const metadata = getMetadata({
   title: 'Blog',
@@ -34,8 +35,8 @@ export default function Blog() {
             <WritingList>
               {posts.map(post => (
                 <WritingPreview
-                  key={post.url}
-                  url={post.url}
+                  key={post.slug}
+                  url={to.blogPost(post.slug)}
                   date={post.date}
                   title={post.title}
                 />

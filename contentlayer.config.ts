@@ -8,15 +8,10 @@ export const Post = defineDocumentType(() => ({
   filePathPattern: `blog/*.mdx`,
   contentType: 'mdx',
   fields: {
+    slug: { type: 'string', required: true },
     title: { type: 'string', required: true },
     date: { type: 'date', required: true },
     excerpt: { type: 'string', required: true },
-  },
-  computedFields: {
-    url: {
-      type: 'string',
-      resolve: post => post._raw.flattenedPath,
-    },
   },
 }));
 
@@ -25,6 +20,7 @@ export const Project = defineDocumentType(() => ({
   filePathPattern: `projects/*.mdx`,
   contentType: 'mdx',
   fields: {
+    slug: { type: 'string', required: true },
     title: { type: 'string', required: true },
     date: { type: 'date', required: true },
     excerpt: { type: 'string', required: true },
@@ -33,12 +29,6 @@ export const Project = defineDocumentType(() => ({
     github: { type: 'string', required: false },
     demo: { type: 'string', required: false },
     pinned: { type: 'boolean', required: false },
-  },
-  computedFields: {
-    url: {
-      type: 'string',
-      resolve: post => post._raw.flattenedPath,
-    },
   },
 }));
 

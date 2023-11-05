@@ -10,15 +10,11 @@ type PageProps = { params: { slug: string } };
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return allPosts.map(post => ({
-    slug: post._raw.flattenedPath.split('/').at(-1),
-  }));
+  return allPosts.map(post => post.slug);
 }
 
 export function generateMetadata({ params }: PageProps) {
-  const post = allPosts.find(post =>
-    post._raw.flattenedPath.endsWith(params.slug),
-  );
+  const post = allPosts.find(post => post.slug === params.slug);
 
   if (!post) {
     notFound();
@@ -31,9 +27,7 @@ export function generateMetadata({ params }: PageProps) {
 }
 
 export default function BlogPost({ params }: PageProps) {
-  const post = allPosts.find(post =>
-    post._raw.flattenedPath.endsWith(params.slug),
-  );
+  const post = allPosts.find(post => post.slug === params.slug);
 
   if (!post) {
     notFound();
