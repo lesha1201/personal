@@ -79,3 +79,5 @@ export const INTERESTS = [
 ];
 
 export const TIME_ZONE = 'UTC+3';
+
+export const IS_BLOG_AVAILABLE = false;

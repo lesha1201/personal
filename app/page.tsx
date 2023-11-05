@@ -13,7 +13,12 @@ import {
   WritingList,
   WritingPreview,
 } from './components';
-import { EMAIL, EXPERIENCE_YEARS, FULL_NAME } from './config';
+import {
+  EMAIL,
+  EXPERIENCE_YEARS,
+  FULL_NAME,
+  IS_BLOG_AVAILABLE,
+} from './config';
 import { getPinnedProjects, getPosts, groupPostsByYear } from './content';
 import { to } from './routing';
 
@@ -50,30 +55,32 @@ export default function Home() {
         </Button>
       </Section>
 
-      <Section className="gap-9">
-        <SectionHeading>Writing</SectionHeading>
+      {IS_BLOG_AVAILABLE && (
+        <Section className="gap-9">
+          <SectionHeading>Writing</SectionHeading>
 
-        {postsByYear.map(([year, posts]) => (
-          <WritingGroup key={year}>
-            <WritingGroupTitle>{year}</WritingGroupTitle>
+          {postsByYear.map(([year, posts]) => (
+            <WritingGroup key={year}>
+              <WritingGroupTitle>{year}</WritingGroupTitle>
 
-            <WritingList>
-              {posts.map(post => (
-                <WritingPreview
-                  key={post.slug}
-                  url={to.blogPost(post.slug)}
-                  date={post.date}
-                  title={post.title}
-                />
-              ))}
-            </WritingList>
-          </WritingGroup>
-        ))}
+              <WritingList>
+                {posts.map(post => (
+                  <WritingPreview
+                    key={post.slug}
+                    url={to.blogPost(post.slug)}
+                    date={post.date}
+                    title={post.title}
+                  />
+                ))}
+              </WritingList>
+            </WritingGroup>
+          ))}
 
-        <Button as={NextLink} href={to.blog()} variant="outlined">
-          Read all
-        </Button>
-      </Section>
+          <Button as={NextLink} href={to.blog()} variant="outlined">
+            Read all
+          </Button>
+        </Section>
+      )}
 
       <Section className="gap-9">
         <SectionHeading>Projects</SectionHeading>

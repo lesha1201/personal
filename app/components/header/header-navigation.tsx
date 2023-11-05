@@ -1,7 +1,7 @@
 import NextLink from 'next/link';
 import React from 'react';
 
-import { GITHUB_URL } from '@/app/config';
+import { GITHUB_URL, IS_BLOG_AVAILABLE } from '@/app/config';
 import { to } from '@/app/routing';
 import { GitHubIcon, IconButton, Logo } from '@/lib/ui';
 import { HeaderNavigationLink } from './header-navigation-link';
@@ -12,9 +12,11 @@ export function HeaderNavigation() {
       <Logo as={NextLink} href={to.home()} />
 
       <div className="ml-7 flex items-center gap-6 sm:ml-9">
-        <HeaderNavigationLink as={NextLink} href={to.blog()}>
-          Blog
-        </HeaderNavigationLink>
+        {IS_BLOG_AVAILABLE && (
+          <HeaderNavigationLink as={NextLink} href={to.blog()}>
+            Blog
+          </HeaderNavigationLink>
+        )}
         <HeaderNavigationLink as={NextLink} href={to.projects()}>
           Projects
         </HeaderNavigationLink>
