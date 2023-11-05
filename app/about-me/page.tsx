@@ -1,4 +1,3 @@
-import { Metadata } from 'next';
 import Image from 'next/image';
 import NextLink from 'next/link';
 
@@ -18,6 +17,7 @@ import {
   WorkExperienceJob,
 } from '../components';
 import {
+  DESCRIPTION,
   EMAIL,
   EXPERIENCE_YEARS,
   GITHUB_URL,
@@ -30,18 +30,15 @@ import {
   WORK_EXPERIENCE,
 } from '../config';
 import { getPinnedProjects } from '../content';
+import { getMetadata } from '../metadata';
 import css from './page.module.css';
 
 const PROJECTS_PREVIEWS_COUNT = 2;
 
-const title = 'About';
-
-export const metadata: Metadata = {
-  title,
-  openGraph: {
-    title,
-  },
-};
+export const metadata = getMetadata({
+  title: 'About',
+  description: DESCRIPTION,
+});
 
 export default function AboutMe() {
   const projects = getPinnedProjects({ limit: PROJECTS_PREVIEWS_COUNT });

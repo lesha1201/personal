@@ -3,6 +3,7 @@ import dayjs from 'dayjs';
 import { notFound } from 'next/navigation';
 
 import { MDXContent, PageHeading, Section } from '@/app/components';
+import { getMetadata } from '@/app/metadata';
 
 type PageProps = { params: { slug: string } };
 
@@ -23,14 +24,10 @@ export function generateMetadata({ params }: PageProps) {
     notFound();
   }
 
-  return {
+  return getMetadata({
     title: post.title,
     description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-    },
-  };
+  });
 }
 
 export default function BlogPost({ params }: PageProps) {

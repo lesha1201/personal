@@ -70,14 +70,14 @@ const components: MDXComponents = {
 
   strong: ({ className, ...props }) => (
     <strong
-      className={tclsx('text-base-text-light font-semibold', className)}
+      className={tclsx('font-semibold text-base-text-light', className)}
       {...props}
     />
   ),
 
   em: ({ className, ...props }) => (
     <em
-      className={tclsx('text-base-text-light font-medium', className)}
+      className={tclsx('font-medium text-base-text-light', className)}
       {...props}
     />
   ),

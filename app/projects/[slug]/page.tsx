@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 import { MDXContent, PageHeading, Section } from '@/app/components';
+import { getMetadata } from '@/app/metadata';
 import { Button, Chip, ChipGroup, ChipLabel } from '@/lib/ui';
 
 type PageProps = { params: { slug: string } };
@@ -24,14 +25,7 @@ export function generateMetadata({ params }: PageProps) {
     notFound();
   }
 
-  return {
-    title: project.title,
-    description: project.excerpt,
-    openGraph: {
-      title: project.title,
-      description: project.excerpt,
-    },
-  };
+  return getMetadata({ title: project.title, description: project.excerpt });
 }
 
 export default function Project({ params }: PageProps) {
