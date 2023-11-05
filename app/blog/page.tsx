@@ -1,4 +1,3 @@
-import { allPosts } from 'contentlayer/generated';
 import * as R from 'remeda';
 
 import {
@@ -9,7 +8,7 @@ import {
   WritingList,
   WritingPreview,
 } from '../components';
-import { groupPostsByYear } from '../content';
+import { getPosts, groupPostsByYear } from '../content';
 import { getMetadata } from '../metadata';
 import { to } from '../routing';
 
@@ -19,7 +18,12 @@ export const metadata = getMetadata({
 });
 
 export default function Blog() {
-  const postsByYear = R.pipe(allPosts, groupPostsByYear, R.toPairs);
+  const postsByYear = R.pipe(
+    getPosts(),
+    groupPostsByYear,
+    R.toPairs,
+    R.sortBy([([year]) => Number.parseInt(year), 'desc']),
+  );
 
   return (
     <>

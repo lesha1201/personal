@@ -25,6 +25,7 @@ export default function Home() {
     getPosts({ limit: POSTS_PREVIEWS_COUNT }),
     groupPostsByYear,
     R.toPairs,
+    R.sortBy([([year]) => Number.parseInt(year), 'desc']),
   );
 
   const projects = getPinnedProjects({ limit: PROJECTS_PREVIEWS_COUNT });
