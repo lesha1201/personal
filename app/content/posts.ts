@@ -20,5 +20,10 @@ export type GetPostsOptions = {
 };
 
 export function getPosts({ limit = Infinity }: GetPostsOptions = {}) {
-  return R.pipe(allPosts, sortPostsByDate, R.take(limit));
+  return R.pipe(
+    allPosts,
+    R.filter(x => !x.hidden),
+    sortPostsByDate,
+    R.take(limit),
+  );
 }
