@@ -3,6 +3,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 
 import { Link, tclsx } from '@/lib/ui';
 import { Code } from './components/code';
+import { Image } from './components/image';
 import { InlineCode } from './components/inline-code';
 
 /*-- MDX Components --*/
@@ -123,6 +124,8 @@ const components: MDXComponents = {
   pre: Code,
 
   code: InlineCode,
+
+  Image,
 };
 
 /*-- Main --*/
