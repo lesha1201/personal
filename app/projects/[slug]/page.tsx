@@ -10,8 +10,8 @@ type PageProps = { params: { slug: string } };
 
 export const dynamicParams = false;
 
-export function generateStaticParams() {
-  return allProjects.map(project => project.slug);
+export function generateStaticParams(): PageProps['params'][] {
+  return allProjects.map(project => ({ slug: project.slug }));
 }
 
 export function generateMetadata({ params }: PageProps) {
