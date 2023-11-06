@@ -1,7 +1,3 @@
-// TODO: remove 'use client' and move tags to a separate component because
-//       they use some client-side code.
-'use client';
-
 import dayjs from 'dayjs';
 import React from 'react';
 
@@ -35,7 +31,7 @@ export function WritingPreview({
         {tags && (
           <div className="flex gap-4">
             {tags.map(tag => (
-              <Chip as="button" key={tag} onClick={() => alert(tag)}>
+              <Chip key={tag}>
                 <ChipLabel>{tag}</ChipLabel>
               </Chip>
             ))}
