@@ -3,9 +3,9 @@ import '@/lib/ui/css/main.css';
 import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google';
 
-import { Header, PageContainer } from './components';
-import { DESCRIPTION, FULL_NAME } from './config';
-import { getMetadata } from './metadata';
+import { Header, PageContainer } from '@/components';
+import { DESCRIPTION, FULL_NAME } from '@/config';
+import { getMetadata } from '@/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 

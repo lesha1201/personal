@@ -31,6 +31,18 @@ A personal website where you can find information about me and read my blog.
 | `npm run format`       | Runs Prettier and formats all code.                   |
 | `npm run format:check` | Runs Prettier and checks all code for bad formatting. |
 
+### Project structure
+
+- `content` - Content of the project such as posts.
+- `src` - Source code of the project.
+  - `app` - App routing.
+    - `<segment>`
+      - `_components` - Segment specific components.
+  - `components` - Shared app components.
+  - `content` - Utilities for working with app content.
+  - `lib` - Modules that are separated from the app and can be reused across projects. They can't depend on app specific code.
+    - `ui` - Design system and UI kit.
+
 ### Environment variables
 
 #### Client side

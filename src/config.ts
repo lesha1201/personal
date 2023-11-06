@@ -1,8 +1,8 @@
 import dayjs from 'dayjs';
 
-import eightBaseLogo from '@/public/images/8base-logo.jpg';
-import datarocketsLogo from '@/public/images/datarockets-logo.jpg';
-import profilesLogo from '@/public/images/profiles-logo.jpg';
+import eightBaseLogo from '~/public/images/8base-logo.jpg';
+import datarocketsLogo from '~/public/images/datarockets-logo.jpg';
+import profilesLogo from '~/public/images/profiles-logo.jpg';
 
 export const FULL_NAME = 'Alexey Ryabov';
 

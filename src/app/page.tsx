@@ -12,15 +12,15 @@ import {
   WritingGroupTitle,
   WritingList,
   WritingPreview,
-} from './components';
+} from '../components';
 import {
   EMAIL,
   EXPERIENCE_YEARS,
   FULL_NAME,
   IS_BLOG_AVAILABLE,
-} from './config';
-import { getPinnedProjects, getPosts, groupPostsByYear } from './content';
-import { to } from './routing';
+} from '../config';
+import { getPinnedProjects, getPosts, groupPostsByYear } from '../content';
+import { to } from '../routing';
 
 const POSTS_PREVIEWS_COUNT = 3;
 const PROJECTS_PREVIEWS_COUNT = 2;

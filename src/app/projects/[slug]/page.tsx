@@ -2,9 +2,9 @@ import { allProjects } from 'contentlayer/generated';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
-import { MDXContent, PageHeading, Section } from '@/app/components';
-import { getMetadata } from '@/app/metadata';
+import { MDXContent, PageHeading, Section } from '@/components';
 import { Button, Chip, ChipGroup, ChipLabel } from '@/lib/ui';
+import { getMetadata } from '@/metadata';
 
 type PageProps = { params: { slug: string } };
 

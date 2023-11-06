@@ -3,10 +3,10 @@ import {
   ProjectGrid,
   ProjectPreview,
   Section,
-} from '../components';
-import { getProjects } from '../content';
-import { getMetadata } from '../metadata';
-import { to } from '../routing';
+} from '@/components';
+import { getProjects } from '@/content';
+import { getMetadata } from '@/metadata';
+import { to } from '@/routing';
 
 export const metadata = getMetadata({
   title: 'Projects',

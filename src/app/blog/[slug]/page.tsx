@@ -2,8 +2,8 @@ import { allPosts } from 'contentlayer/generated';
 import dayjs from 'dayjs';
 import { notFound } from 'next/navigation';
 
-import { MDXContent, PageHeading, Section } from '@/app/components';
-import { getMetadata } from '@/app/metadata';
+import { MDXContent, PageHeading, Section } from '@/components';
+import { getMetadata } from '@/metadata';
 
 type PageProps = { params: { slug: string } };
 

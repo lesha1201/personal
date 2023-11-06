@@ -1,11 +1,8 @@
 import Image from 'next/image';
 import NextLink from 'next/link';
 
-import { Button, Chip, ChipGroup, ChipLabel, Link, tclsx } from '@/lib/ui';
-import profilePortrait from '@/public/images/profile-portrait.jpg';
+import profilePortrait from '~/public/images/profile-portrait.jpg';
 import {
-  DetailsGroup,
-  DetailsGroupTitle,
   PageHeading,
   ProjectGrid,
   ProjectPreview,
@@ -15,7 +12,7 @@ import {
   Section,
   SectionHeading,
   WorkExperienceJob,
-} from '../components';
+} from '@/components';
 import {
   DESCRIPTION,
   EMAIL,
@@ -28,10 +25,12 @@ import {
   TELEGRAM_USERNAME,
   TIME_ZONE,
   WORK_EXPERIENCE,
-} from '../config';
-import { getPinnedProjects } from '../content';
-import { getMetadata } from '../metadata';
-import { to } from '../routing';
+} from '@/config';
+import { getPinnedProjects } from '@/content';
+import { Button, Chip, ChipGroup, ChipLabel, Link, tclsx } from '@/lib/ui';
+import { getMetadata } from '@/metadata';
+import { to } from '@/routing';
+import { DetailsGroup, DetailsGroupTitle } from './_components';
 import css from './page.module.css';
 
 const PROJECTS_PREVIEWS_COUNT = 2;

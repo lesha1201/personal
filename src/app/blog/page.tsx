@@ -7,10 +7,10 @@ import {
   WritingGroupTitle,
   WritingList,
   WritingPreview,
-} from '../components';
-import { getPosts, groupPostsByYear } from '../content';
-import { getMetadata } from '../metadata';
-import { to } from '../routing';
+} from '@/components';
+import { getPosts, groupPostsByYear } from '@/content';
+import { getMetadata } from '@/metadata';
+import { to } from '@/routing';
 
 export const metadata = getMetadata({
   title: 'Blog',

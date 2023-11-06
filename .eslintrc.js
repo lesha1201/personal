@@ -29,9 +29,10 @@ module.exports = {
           ['^node:'],
           // Packages.
           ['^@?\\w'],
-          // 1. Absolute imports and other imports such as Vue-style `@/foo`.
-          // 2. Relative imports.
-          ['^', '^\\.'],
+          // 1. Root alias.
+          // 2. `src` alias.
+          // 3. Relative imports.
+          ['^~/', '^@/', '^\\.'],
         ],
       },
     ],

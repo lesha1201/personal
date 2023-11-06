@@ -1,5 +1,3 @@
-export * from './details-group';
-export * from './details-group-title';
 export * from './header';
 export * from './mdx';
 export * from './page-container';
@@ -8,9 +6,7 @@ export * from './project-grid';
 export * from './project-preview';
 export * from './property';
 export * from './section';
-export * from './section-heading';
 export * from './work-experience-job';
 export * from './writing-group';
-export * from './writing-group-title';
 export * from './writing-list';
 export * from './writing-preview';

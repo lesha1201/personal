@@ -1,9 +1,9 @@
 import NextLink from 'next/link';
 import React from 'react';
 
-import { GITHUB_URL, IS_BLOG_AVAILABLE } from '@/app/config';
-import { to } from '@/app/routing';
+import { GITHUB_URL, IS_BLOG_AVAILABLE } from '@/config';
 import { GitHubIcon, IconButton, Logo } from '@/lib/ui';
+import { to } from '@/routing';
 import { HeaderNavigationLink } from './header-navigation-link';
 
 export function HeaderNavigation() {
