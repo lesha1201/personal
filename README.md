@@ -1,6 +1,6 @@
 A personal website where you can find information about me and read my blog.
 
-![Project preview](./app/og-image.png 'Project preview')
+![Project preview](./src/og-image.png 'Project preview')
 
 ## 🧰 Tech Stack
 
