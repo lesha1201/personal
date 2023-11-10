@@ -61,16 +61,6 @@ character in a paragraph into a `<br />` tag.
 When you _do_ want to insert a `<br />` break tag using Markdown, you
 end a line with two or more spaces, then type return.
 
-### Headers
-
-Markdown supports two styles of headers, [Setext] [1] and [atx] [2].
-
-Optionally, you may "close" atx-style headers. This is purely
-cosmetic -- you can use this if you think it looks better. The
-closing hashes don't even need to match the number of hashes
-used to open the header. (The number of opening hashes
-determines the header level.)
-
 ### Blockquotes
 
 Markdown uses email-style `>` characters for blockquoting. If you're
@@ -114,7 +104,9 @@ and code blocks:
 >
 > Here's some example code:
 >
->     return shell_exec("echo $input | $markdown_script");
+> ```
+> return shell_exec("echo $input | $markdown_script");
+> ```
 
 Any decent text editor should make email-style quoting easy. For
 example, with BBEdit, you can make a selection and choose Increase
@@ -131,18 +123,6 @@ Unordered lists use asterisks, pluses, and hyphens -- interchangably
 - Green
 - Blue
 
-is equivalent to:
-
-- Red
-- Green
-- Blue
-
-and:
-
-- Red
-- Green
-- Blue
-
 Ordered lists use numbers followed by periods:
 
 1.  Bird
@@ -153,17 +133,9 @@ It's important to note that the actual numbers you use to mark the
 list have no effect on the HTML output Markdown produces. The HTML
 Markdown produces from the above list is:
 
-If you instead wrote the list in Markdown like this:
-
 1.  Bird
 1.  McHale
 1.  Parish
-
-or even:
-
-3. Bird
-1. McHale
-1. Parish
 
 you'd get the exact same HTML output. The point is, if you want to,
 you can use ordinal numbers in your ordered Markdown lists, so that
@@ -178,17 +150,11 @@ To make lists look nice, you can wrap items with hanging indents:
 - Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
   Suspendisse id sem consectetuer libero luctus adipiscing.
 
-But if you want to be lazy, you don't have to:
-
-- Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-  Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-  viverra nec, fringilla in, laoreet vitae, risus.
-- Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-  Suspendisse id sem consectetuer libero luctus adipiscing.
-
 List items may consist of multiple paragraphs. Each subsequent
 paragraph in a list item must be indented by either 4 spaces
 or one tab:
+
+{/* TODO */}
 
 1.  This is a list item with two paragraphs. Lorem ipsum dolor
     sit amet, consectetuer adipiscing elit. Aliquam hendrerit
@@ -234,33 +200,45 @@ in both `<pre>` and `<code>` tags.
 To produce a code block in Markdown, simply indent every line of the
 block by at least 4 spaces or 1 tab.
 
-This is a normal paragraph:
-
-    This is a code block.
-
-Here is an example of AppleScript:
-
-    tell application "Foo"
-        beep
-    end tell
-
-A code block continues until it reaches a line that is not indented
-(or the end of the article).
-
-Within a code block, ampersands (`&`) and angle brackets (`<` and `>`)
-are automatically converted into HTML entities. This makes it very
-easy to include example HTML source code using Markdown -- just paste
-it and indent it, and Markdown will handle the hassle of encoding the
-ampersands and angle brackets. For example, this:
-
-Regular Markdown syntax is not processed within code blocks. E.g.,
-asterisks are just literal asterisks within a code block. This means
-it's also easy to use Markdown to write about Markdown's own syntax.
+Text code block:
 
 ```
-tell application "Foo"
-    beep
-end tell
+This is a code block.
+```
+
+TSX code block:
+
+```tsx
+// Some comment
+type ButtonProps = {
+  label: string;
+}
+
+/**
+ * JSDoc comment
+ */
+function Button({ label }: ButtonProps) {
+  return (
+    <button>{label}</button>
+  );
+}
+```
+
+Highlighted word:
+
+```js /carrot/
+console.log('carrot');
+```
+
+Highlighted line:
+
+```html {3}
+<html>
+  <body>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+  </body>
+</html>
 ```
 
 ## Span Elements

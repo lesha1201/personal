@@ -13,7 +13,7 @@ export const HeaderNavigationLink = createAsComponent<
       ref={ref}
       as={as}
       {...rest}
-      className="text-sm text-base-text-weak hover:text-white sm:text-base"
+      className="text-sm text-base-text-weak hover:text-base-text-strong sm:text-base"
     >
       {children}
     </Link>

@@ -39,6 +39,17 @@ export default makeSource({
   contentDirPath: 'content',
   documentTypes: [Post, Project],
   mdx: {
-    rehypePlugins: [[rehypePrettyCode, { keepBackground: false }]],
+    rehypePlugins: [
+      [
+        rehypePrettyCode,
+        {
+          keepBackground: false,
+          theme: {
+            dark: 'github-dark-dimmed',
+            light: 'github-light',
+          },
+        },
+      ],
+    ],
   },
 });

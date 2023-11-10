@@ -30,6 +30,29 @@
     --color-primary-surface-text-strong: var(--color-base-bg);
   }
 
+  .light {
+    /*-- Colors --*/
+
+    color-scheme: light;
+
+    /* Base */
+    --color-base-bg: var(--color-white);
+    --color-base-text-strong: var(--color-black);
+    --color-base-text-light: 38 38 38;
+    --color-base-text-weak: 64 64 64;
+    --color-base-text-subtle: 82 82 82;
+    --color-base-border: 212 212 212;
+    --color-base-surface: 245 245 245;
+    --color-base-surface-text-strong: var(--color-base-text-strong);
+    --color-base-surface-text-weak: var(--color-base-text-weak);
+
+    /* Primary */
+    --color-primary-text: var(--color-base-text-strong);
+    --color-primary-border: var(--color-base-text-strong);
+    --color-primary-surface: var(--color-base-text-strong);
+    --color-primary-surface-text-strong: var(--color-base-bg);
+  }
+
   body {
     background-color: theme('colors.base.bg');
     color: theme('colors.base.text-strong');

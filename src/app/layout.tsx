@@ -9,6 +9,7 @@ import faviconSvg from '~/public/meta/favicon.svg';
 import { Header, PageContainer } from '@/components';
 import { DESCRIPTION, FULL_NAME } from '@/config';
 import { getMetadata } from '@/metadata';
+import { ThemeProvider } from './_components';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -35,11 +36,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Header />
-
-        <PageContainer>{children}</PageContainer>
+        <ThemeProvider>
+          <Header />
+          <PageContainer>{children}</PageContainer>
+        </ThemeProvider>
 
         <Analytics />
       </body>

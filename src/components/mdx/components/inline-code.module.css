@@ -5,3 +5,11 @@
   border: 1px solid theme(colors.base.border);
   white-space: nowrap;
 }
+
+:global(.light) .code[data-theme='dark'] {
+  display: none;
+}
+
+:global(.light) .code[data-theme='light'] {
+  display: block;
+}
