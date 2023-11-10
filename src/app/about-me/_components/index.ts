@@ -1,2 +1,2 @@
-export * from './details-group'
-export * from './details-group-title'
+export * from './details-group';
+export * from './details-group-title';

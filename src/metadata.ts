@@ -2,7 +2,10 @@ import { Metadata } from 'next';
 
 import ogImage from '~/public/meta/og-image.png';
 
-export type GetMetadataInput = Omit<Metadata, 'title' | 'description' | 'openGraph'> & {
+export type GetMetadataInput = Omit<
+  Metadata,
+  'title' | 'description' | 'openGraph'
+> & {
   title: NonNullable<Metadata['title']>;
   description: NonNullable<Metadata['description']>;
   image?: NonNullable<Metadata['openGraph']>['images'];
@@ -13,7 +16,7 @@ const DEFAULT_METADATA: Partial<GetMetadataInput> = {
 };
 
 export function getMetadata(data: GetMetadataInput): Metadata {
-  const { title, description, image, ...rest } = data
+  const { title, description, image, ...rest } = data;
 
   return {
     ...rest,

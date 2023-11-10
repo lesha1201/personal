@@ -85,6 +85,6 @@ export const IS_BLOG_AVAILABLE = false;
 export const THEME = {
   light: 'light',
   dark: 'dark',
-} as const
+} as const;
 
-export const THEMES = Object.values(THEME)
+export const THEMES = Object.values(THEME);
