@@ -23,6 +23,7 @@ export function generateMetadata({ params }: PageProps) {
   return getMetadata({
     title: post.title,
     description: post.excerpt,
+    keywords: post.keywords,
   });
 }
 
