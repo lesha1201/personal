@@ -7,8 +7,8 @@ export type ImageProps = NextImageProps & {
 
 export function Image({ caption, ...rest }: ImageProps) {
   return (
-    <figure className="relative my-[1.65em]">
-      <NextImage className="rounded-lg" {...rest} />
+    <figure className="relative my-[1.65em] first:mt-0">
+      <NextImage className="rounded-lg" sizes="(max-width: 48rem) 100vw, 48rem" {...rest} />
       {caption && (
         <figcaption className="mt-2 text-xs text-base-text-subtle">
           {caption}
