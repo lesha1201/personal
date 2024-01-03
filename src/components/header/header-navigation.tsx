@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 import { useTheme } from 'next-themes';
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { GITHUB_URL, IS_BLOG_AVAILABLE, THEME } from '@/config';
+import { GITHUB_URL, THEME } from '@/config';
 import { GitHubIcon, IconButton, Logo, MoonIcon, SunIcon } from '@/lib/ui';
 import { to } from '@/routing';
 import { HeaderNavigationLink } from './header-navigation-link';
@@ -31,11 +31,9 @@ export function HeaderNavigation() {
       <Logo as={NextLink} href={to.home()} />
 
       <div className="flex items-center gap-4 sm:gap-6">
-        {IS_BLOG_AVAILABLE && (
-          <HeaderNavigationLink as={NextLink} href={to.blog()}>
-            Blog
-          </HeaderNavigationLink>
-        )}
+        <HeaderNavigationLink as={NextLink} href={to.blog()}>
+          Blog
+        </HeaderNavigationLink>
         <HeaderNavigationLink as={NextLink} href={to.projects()}>
           Projects
         </HeaderNavigationLink>
