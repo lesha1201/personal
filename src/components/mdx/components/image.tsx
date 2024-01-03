@@ -1,7 +1,8 @@
 import NextImage, { ImageProps as NextImageProps } from 'next/image';
 import React from 'react';
 
-export type ImageProps = NextImageProps & {
+export type ImageProps = Omit<NextImageProps, 'alt'> & {
+  alt?: string;
   caption?: React.ReactNode;
 };
 
@@ -11,6 +12,7 @@ export function Image({ caption, ...rest }: ImageProps) {
       <NextImage
         className="rounded-lg"
         sizes="(max-width: 48rem) 100vw, 48rem"
+        alt={typeof caption === 'string' ? caption : ''}
         {...rest}
       />
       {caption && (
