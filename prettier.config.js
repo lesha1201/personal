@@ -11,4 +11,5 @@ module.exports = {
   printWidth: 80,
   plugins: ['prettier-plugin-tailwindcss'],
   tailwindFunctions: ['tv'],
+  proseWrap: 'always',
 };

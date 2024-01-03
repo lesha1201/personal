@@ -4,9 +4,12 @@ A personal website where you can find information about me and read my blog.
 
 ## 🧰 Tech Stack
 
-- Core: [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/)
+- Core: [Next.js](https://nextjs.org/),
+  [TypeScript](https://www.typescriptlang.org/)
 - Styling: [Tailwind CSS](https://tailwindcss.com/)
-- Content: [Contentlayer](https://contentlayer.dev/), [Shiki](https://shiki.matsu.io/), [Rehype Pretty Code](https://rehype-pretty-code.netlify.app/)
+- Content: [Contentlayer](https://contentlayer.dev/),
+  [Shiki](https://shiki.matsu.io/),
+  [Rehype Pretty Code](https://rehype-pretty-code.netlify.app/)
 - Linting: [ESlint](https://eslint.org/), [Prettier](https://prettier.io/),
 - Deployment: [Vercel](https://vercel.com/)
 
@@ -40,7 +43,8 @@ A personal website where you can find information about me and read my blog.
       - `_components` - Segment specific components.
   - `components` - Shared app components.
   - `content` - Utilities for working with app content.
-  - `lib` - Modules that are separated from the app and can be reused across projects. They can't depend on app specific code.
+  - `lib` - Modules that are separated from the app and can be reused across
+    projects. They can't depend on app specific code.
     - `ui` - Design system and UI kit.
 
 ### Environment variables
