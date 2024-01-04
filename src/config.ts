@@ -4,6 +4,9 @@ import eightBaseLogo from '~/public/images/8base-logo.jpg';
 import datarocketsLogo from '~/public/images/datarockets-logo.jpg';
 import profilesLogo from '~/public/images/profiles-logo.jpg';
 
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
 export const FULL_NAME = 'Alexey Ryabov';
 
 export const EMAIL = 'ryabovlesha@gmail.com';

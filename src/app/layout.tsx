@@ -7,16 +7,14 @@ import appleTouchIcon from '~/public/meta/apple-touch-icon.png';
 import favicon from '~/public/meta/favicon.ico';
 import faviconSvg from '~/public/meta/favicon.svg';
 import { Header, PageContainer } from '@/components';
-import { DESCRIPTION, FULL_NAME } from '@/config';
+import { DESCRIPTION, FULL_NAME, SITE_URL } from '@/config';
 import { getMetadata } from '@/metadata';
 import { ThemeProvider } from './_components';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = getMetadata({
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-  ),
+  metadataBase: new URL(SITE_URL),
   title: {
     template: `%s | ${FULL_NAME}`,
     default: FULL_NAME,
