@@ -2,9 +2,8 @@ import React from 'react';
 
 import { Prefer } from './utils';
 
-export type ExtractRefElement<T> = T extends React.RefObject<infer E>
-  ? E
-  : never;
+export type ExtractRefElement<T> =
+  T extends React.RefObject<infer E> ? E : never;
 
 export type As = React.ElementType;
 
