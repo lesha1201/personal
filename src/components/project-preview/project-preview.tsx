@@ -21,7 +21,7 @@ export function ProjectPreview({
     >
       <div className="bg-neutral-300 relative rounded-t-[inherit] pt-[56.4706%]">
         <Image
-          className="absolute inset-0 rounded-[inherit] grayscale transition-all group-hover:grayscale-0"
+          className="absolute inset-0 rounded-[inherit] object-cover grayscale transition-all group-hover:grayscale-0"
           src={coverImage}
           sizes="31.25rem"
           quality={80}

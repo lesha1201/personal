@@ -40,7 +40,7 @@ export default function Project({ params }: PageProps) {
       <div className="mb-10 mt-5 flex flex-col items-start gap-7">
         <div className="relative w-full pt-[56.4706%]">
           <Image
-            className="rounded-lg"
+            className="rounded-lg object-cover"
             src={project.cover}
             sizes="60rem"
             quality={85}
