@@ -59,6 +59,13 @@ const components: MDXComponents = {
     />
   ),
 
+  hr: ({ className, ...props }) => (
+    <hr
+      className={tclsx('my-12 border-base-border-subtle', className)}
+      {...props}
+    />
+  ),
+
   p: ({ className, ...props }) => (
     <p
       className={tclsx(
