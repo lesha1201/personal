@@ -10,7 +10,7 @@ export function Image({ caption, ...rest }: ImageProps) {
   return (
     <figure className="relative my-[1.65em] first:mt-0">
       <NextImage
-        className="rounded-lg"
+        className="rounded-lg border border-base-border-subtle"
         sizes="(max-width: 48rem) 100vw, 48rem"
         alt={typeof caption === 'string' ? caption : ''}
         {...rest}

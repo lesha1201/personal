@@ -15,6 +15,7 @@ module.exports = {
       base: {
         bg: 'rgb(var(--color-base-bg) / <alpha-value>)',
         border: 'rgb(var(--color-base-border) / <alpha-value>)',
+        'border-subtle': 'rgb(var(--color-base-border-subtle) / <alpha-value>)',
         'text-strong': 'rgb(var(--color-base-text-strong) / <alpha-value>)',
         'text-light': 'rgb(var(--color-base-text-light) / <alpha-value>)',
         'text-weak': 'rgb(var(--color-base-text-weak) / <alpha-value>)',

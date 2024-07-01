@@ -19,6 +19,7 @@
     --color-base-text-weak: 212 212 212;
     --color-base-text-subtle: 163 163 163;
     --color-base-border: 64 64 64;
+    --color-base-border-subtle: 38 38 38;
     --color-base-surface: 23 23 23;
     --color-base-surface-text-strong: var(--color-base-text-strong);
     --color-base-surface-text-weak: var(--color-base-text-weak);
@@ -42,6 +43,7 @@
     --color-base-text-weak: 64 64 64;
     --color-base-text-subtle: 82 82 82;
     --color-base-border: 212 212 212;
+    --color-base-border-subtle: 229 229 229;
     --color-base-surface: 245 245 245;
     --color-base-surface-text-strong: var(--color-base-text-strong);
     --color-base-surface-text-weak: var(--color-base-text-weak);
