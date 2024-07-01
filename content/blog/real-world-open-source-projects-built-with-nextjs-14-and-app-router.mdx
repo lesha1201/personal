@@ -1,0 +1,482 @@
+---
+slug: real-world-open-source-projects-built-with-nextjs-14-and-app-router
+title: Real-world open-source projects built with Next.js 14 and App Router
+date: 2024-06-28T10:00:00.000Z
+excerpt: >
+  Discover how others build real-world Next.js applications by examining their
+  codebase.
+keywords:
+  - nextjs
+  - frontend
+  - react
+  - open source
+---
+
+> Thanks [datarockets](https://datarockets.com/) for giving me an opportunity to
+> write this blog post. You can read this article on
+> [their website](https://datarockets.com/blog/code/open-source-projects-nextjs14-and-app-router/).
+
+Discover how others build real-world Next.js applications by examining their
+codebase.
+
+Learning from others' codebases can help you grow as a developer, gain
+inspiration for organizing your codebase, develop a certain feature, manage
+CI/CD, and much more. You can learn both best practices and some practices to
+avoid in real-world scenarios. You can find new technologies that might better
+solve certain cases.
+
+In this article, you will find a selection of open-source projects built using
+Next.js and App Router.
+
+---
+
+## Unkey
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/unkey.com.png"
+  alt="Screenshot of Unkey"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/unkeyed/unkey) · [Website](https://www.unkey.com/)
+
+Unkey is an open-source API management platform for scaling APIs. Unkey provides
+API key management and standalone rate limiting.
+
+The repository is a monorepo managed via [Turborepo](https://turbo.build/). It
+contains several apps:
+
+- [www](https://github.com/unkeyed/unkey/tree/main/apps/www) - marketing
+  website, landing page, blog, etc.
+- [dashboard](https://github.com/unkeyed/unkey/tree/main/apps/dashboard) - main
+  application
+- [docs](https://github.com/unkeyed/unkey/tree/main/apps/docs) - documentation
+  website
+
+**Stack:** [Turborepo](https://turbo.build/),
+[Tailwind](https://tailwindcss.com/), [tRPC](https://trpc.io/),
+[Planetscale](https://planetscale.com/),
+[Drizzle ORM](https://orm.drizzle.team/), [Clerk](https://clerk.com/),
+[React Hook Form](https://react-hook-form.com/), [Zod](https://zod.dev/),
+[Resend](https://resend.com/), [Stripe](https://stripe.com/),
+[Mintlify](https://mintlify.com/)
+
+---
+
+## Cal.com
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/cal.com.png"
+  alt="Screenshot of Cal.com"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/calcom/cal.com) · [Website](https://cal.com/)
+
+An open-source Calendly alternative. A scheduling solution that gives you a
+full-control of your events and data.
+
+They are still in the process of migrating to App Router, which is a good
+example of how a large-scale app can be migrated to App Router incrementally.
+
+The repository is a monorepo managed via [Turborepo](https://turbo.build/). The
+main app is located in
+[apps/web](https://github.com/calcom/cal.com/tree/main/apps/web). There, you can
+find that it has both `app` and `pages` folder. And many routes from `pages` are
+available in `app/future` folder.
+
+**Stack:** [Turborepo](https://turbo.build/),
+[Tailwind](https://tailwindcss.com/), [tRPC](https://trpc.io/),
+[Prisma](https://www.prisma.io/), [Kysely](https://kysely.dev/)
+[Auth.js](https://authjs.dev/), [React Hook Form](https://react-hook-form.com/),
+[Zod](https://zod.dev/), [Zustand](https://zustand-demo.pmnd.rs/),
+[Tanstack Query](https://tanstack.com/query), [Stripe](https://stripe.com/)
+
+---
+
+## Documenso
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/documenso.com.png"
+  alt="Screenshot of Documenso"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/documenso/documenso) ·
+[Website](https://documenso.com/)
+
+An open-source DocuSign alternative. A service for signing documents digitally.
+
+The repository is a monorepo managed via [Turborepo](https://turbo.build/). It
+contains several Next.js apps:
+
+- [marketing](https://github.com/documenso/documenso/tree/main/apps/marketing) -
+  marketing website, landing page, blog, etc.
+- [web](https://github.com/documenso/documenso/tree/main/apps/web) - main
+  application
+
+**Stack:** [Turborepo](https://turbo.build/),
+[Tailwind](https://tailwindcss.com/), [tRPC](https://trpc.io/),
+[Prisma](https://www.prisma.io/), [Kysely](https://kysely.dev/)
+[Auth.js](https://authjs.dev/), [React Hook Form](https://react-hook-form.com/),
+[Zod](https://zod.dev/), [Resend](https://resend.com/),
+[Stripe](https://stripe.com/)
+
+---
+
+## TypeHero
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/typehero.dev.png"
+  alt="Screenshot of TypeHero"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/typehero/typehero) ·
+[Website](https://typehero.dev/)
+
+TypeHero is a platform for enhancing your TypeScript skills via interactive code
+challenges.
+
+The repository is a monorepo managed via [Turborepo](https://turbo.build/). It
+contains several Next.js apps:
+
+- [web](https://github.com/typehero/typehero/tree/main/apps/web) - main
+  application
+- [admin](https://github.com/typehero/typehero/tree/main/apps/admin) - admin
+  panel for the main application
+
+**Stack:** [Turborepo](https://turbo.build/),
+[Tailwind](https://tailwindcss.com/), [Prisma](https://www.prisma.io/),
+[Auth.js](https://authjs.dev/), [React Hook Form](https://react-hook-form.com/),
+[Zod](https://zod.dev/), [Zustand](https://zustand-demo.pmnd.rs/),
+[Tanstack Query](https://tanstack.com/query), [Resend](https://resend.com/)
+
+---
+
+## Dify
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/dify.ai.jpg"
+  alt="Screenshot of Dify"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/langgenius/dify) · [Website](https://dify.ai/)
+
+Dify is an open-source LLM app development platform. Dify's interface combines
+AI workflow, RAG pipeline, agent capabilities, model management, observability
+features and more.
+
+**Stack:** [Tailwind](https://tailwindcss.com/),
+[React Hook Form](https://react-hook-form.com/), [Zod](https://zod.dev/),
+[Zustand](https://zustand-demo.pmnd.rs/), [SWR](https://swr.vercel.app/)
+
+---
+
+## Dub
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/dub.co.png"
+  alt="Screenshot of Dub"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/dubinc/dub) · [Website](https://dub.co/)
+
+Dub.co is an open-source URL shortening service and a link management platform.
+An open-source alternative to Bitly.
+
+The repository is a monorepo managed via [Turborepo](https://turbo.build/). The
+main app is located in
+[apps/web](https://github.com/dubinc/dub/tree/main/apps/web).
+
+**Stack:** [Turborepo](https://turbo.build/),
+[Tailwind](https://tailwindcss.com/), [Planetscale](https://planetscale.com/),
+[Prisma](https://www.prisma.io/), [Auth.js](https://authjs.dev/),
+[Zod](https://zod.dev/), [SWR](https://swr.vercel.app/),
+[Upstash](https://upstash.com/), [Tinybird](https://tinybird.com/),
+[Stripe](https://stripe.com/), [Mintlify](https://mintlify.com/)
+
+---
+
+## Noodle
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/noodle.run.png"
+  alt="Screenshot of Noodle"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/noodle-run/noodle) · [Website](https://noodle.run/)
+
+Noodle is a platform for managing everything to do with students education like
+note-taking, calendar, task management, grade calculator, flashcards and more.
+
+It's an indie project and still not released yet. But it's a good example of an
+app built using modern technologies.
+
+**Stack:** [Bun](https://bun.sh/), [Tailwind](https://tailwindcss.com/),
+[tRPC](https://trpc.io/), [Drizzle ORM](https://orm.drizzle.team/),
+[Clerk](https://clerk.com/) [React Hook Form](https://react-hook-form.com/),
+[Zod](https://zod.dev/), [Tanstack Query](https://tanstack.com/query),
+[Resend](https://resend.com/)
+
+---
+
+## Midday
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/midday.png"
+  alt="Screenshot of Midday"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/midday-ai/midday) · [Website](https://midday.ai/)
+
+An all-in-one tool for freelancers, contractors, consultants, and solo
+entrepreneurs to manage their finances, track projects, store files, and send
+invoices.
+
+The repository is a monorepo managed via [Turborepo](https://turbo.build/). It
+contains several apps:
+
+- [website](https://github.com/midday-ai/midday/tree/main/apps/website) -
+  marketing website, landing page, blog, etc.
+- [dashboard](https://github.com/midday-ai/midday/tree/main/apps/dashboard) -
+  main application, dashboard
+- [docs](https://github.com/midday-ai/midday/tree/main/apps/docs) -
+  documentation website
+
+**Stack:** [Bun](https://bun.sh/), [Turborepo](https://turbo.build/),
+[Tailwind](https://tailwindcss.com/), [Supabase](https://supabase.com/),
+[Upstash](https://upstash.com/),
+[React Hook Form](https://react-hook-form.com/), [Zod](https://zod.dev/),
+[Zustand](https://zustand-demo.pmnd.rs/), [Resend](https://resend.com/),
+[Mintlify](https://mintlify.com/)
+
+---
+
+## Morphic
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/morphic.sh.png"
+  alt="Screenshot of Morphic"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/miurla/morphic) · [Website](https://morphic.sh/)
+
+An AI-powered search engine with a generative UI.
+
+**Stack:** [Bun](https://bun.sh/), [Tailwind](https://tailwindcss.com/),
+[Vercel AI SDK](https://sdk.vercel.ai/docs), [OpenAI](https://openai.com/),
+[Tavily AI](https://tavily.com/), [Serper](https://serper.dev/),
+[Jina AI](https://jina.ai/), [Upstash](https://upstash.com/)
+
+---
+
+## Supabase
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/supabase.com.png"
+  alt="Screenshot of Supabase"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/supabase/supabase) ·
+[Website](https://supabase.com/)
+
+Supabase is an open source Firebase alternative.
+
+Supabase doesn't use fully App Router but their new apps uses it. The repository
+is a monorepo managed via [Turborepo](https://turbo.build/). It contains several
+Next.js apps:
+
+- [database-new](https://github.com/supabase/supabase/tree/master/apps/database-new) -
+  some new app by Supabase. It uses App Router.
+- [www](https://github.com/supabase/supabase/tree/master/apps/www) - marketing
+  website, landing page, blog, etc. It doesn't use App Router yet.
+- [studio](https://github.com/supabase/supabase/tree/master/apps/studio) - main
+  application. It doesn't use App Router yet.
+- [docs](https://github.com/supabase/supabase/tree/master/apps/docs) -
+  documentation website. It doesn't use App Router yet. There is PR for
+  migrating it to App Router -
+  [link](https://github.com/supabase/supabase/pull/23101).
+
+**Stack:** [Turborepo](https://turbo.build/),
+[Tailwind](https://tailwindcss.com/), [OpenAI](https://openai.com/),
+[React Hook Form](https://react-hook-form.com/), [Zod](https://zod.dev/),
+[Tanstack Query](https://tanstack.com/query), [Stripe](https://stripe.com/)
+
+---
+
+## OpenStatus
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/openstatus.dev.png"
+  alt="Screenshot of OpenStatus"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/openstatusHQ/openstatus) ·
+[Website](https://www.openstatus.dev/)
+
+OpenStatus is an open-source synthetic and frontend performance monitoring
+service.
+
+The repository is a monorepo managed via [Turborepo](https://turbo.build/). It
+contains several apps:
+
+- [web](https://github.com/openstatusHQ/openstatus/tree/main/apps/web) - main
+  application, landing page
+- [docs](https://github.com/openstatusHQ/openstatus/tree/main/apps/docs) -
+  documentation website
+
+**Stack:** [Turborepo](https://turbo.build/),
+[Tailwind](https://tailwindcss.com/), [tRPC](https://trpc.io/),
+[Upstash](https://upstash.com/), [Tinybird](https://tinybird.com/),
+[Turso](http://turso.tech/), [Drizzle ORM](https://orm.drizzle.team/),
+[Auth.js](https://authjs.dev/), [React Hook Form](https://react-hook-form.com/),
+[Zod](https://zod.dev/), [Stripe](https://stripe.com/),
+[Resend](https://resend.com/), [Mintlify](https://mintlify.com/)
+
+---
+
+## Skateshop
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/skateshop.sadmn.com.png"
+  alt="Screenshot of Skateshop"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/sadmann7/skateshop) ·
+[Website](https://skateshop.sadmn.com/)
+
+An open source e-commerce skateshop built with modern approaches and
+technologies.
+
+It's not a real-world application but a good example of how to develop modern
+Next.js application.
+
+**Stack:** [Tailwind](https://tailwindcss.com/), [Clerk](https://clerk.com/),
+[Upstash](https://upstash.com/), [OpenAI](https://openai.com/),
+[Drizzle ORM](https://orm.drizzle.team/),
+[React Hook Form](https://react-hook-form.com/), [Zod](https://zod.dev/),
+[Stripe](https://stripe.com/), [Resend](https://resend.com/)
+
+---
+
+## Feedbase
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/feedbase.app.png"
+  alt="Screenshot of Feedbase"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/chroxify/feedbase) ·
+[Website](https://feedbase.app/)
+
+An open-source solution for collecting feedback and communicating updates.
+
+The repository is a monorepo managed via [Turborepo](https://turbo.build/). It
+contains several apps:
+
+- [web](https://github.com/chroxify/feedbase/tree/main/apps/web) - main
+  application, landing page
+- [docs](https://github.com/chroxify/feedbase/tree/main/apps/docs) -
+  documentation website
+
+**Stack:** [Turborepo](https://turbo.build/),
+[Tailwind](https://tailwindcss.com/), [Supabase](https://supabase.com/),
+[Tinybird](https://tinybird.com/),
+[React Hook Form](https://react-hook-form.com/), [Zod](https://zod.dev/),
+[SWR](https://swr.vercel.app/), [Resend](https://resend.com/),
+[Mintlify](https://mintlify.com/)
+
+---
+
+## Plane
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/plane.so.png"
+  alt="Screenshot of Plane"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/makeplane/plane) · [Website](https://plane.so/)
+
+An open Source JIRA, Linear and Asana alternative. Plane helps you track your
+issues, epics, and product roadmaps.
+
+The repository is a monorepo managed via [Turborepo](https://turbo.build/). It
+contains several Next.js apps:
+
+- [admin](https://github.com/makeplane/plane/tree/preview/admin) - admin panel.
+  It uses App Router.
+- [web](https://github.com/makeplane/plane/tree/preview/web) - main application.
+  It doesn't App Router yet.
+- [space](https://github.com/makeplane/plane/tree/preview/space) - some
+  application. It uses App Router.
+
+**Stack:** [Turborepo](https://turbo.build/),
+[Tailwind](https://tailwindcss.com/),
+[React Hook Form](https://react-hook-form.com/), [SWR](https://swr.vercel.app/),
+[MobX](https://mobx.js.org/)
+
+---
+
+## egghead.io
+
+<Image
+  src="/images/blog/real-world-open-source-projects-built-with-nextjs-14-and-app-router/egghead.io.png"
+  alt="Screenshot of egghead.io"
+  width={2880}
+  height={1800}
+/>
+
+[GitHub](https://github.com/skillrecordings/egghead-next) ·
+[Website](https://egghead.io/)
+
+egghead a learning platform for front-end developers.
+
+They are still in the process of migrating to App Router, which is a good
+example of how a large-scale app can be migrated to App Router incrementally.
+
+**Stack:** [Tailwind](https://tailwindcss.com/), [tRPC](https://trpc.io/),
+[Prisma](https://www.prisma.io/), [Sanity](https://www.sanity.io/),
+[Formik](https://formik.org/), [Zod](https://zod.dev/),
+[SWR](https://swr.vercel.app/), [Tanstack Query](https://tanstack.com/query),
+[Upstash](https://upstash.com/), [Stripe](https://stripe.com/)
+
+---
+
+## Conclusion
+
+In this article, we explored several open-source projects built with Next.js 14
+and App Router. These open-source projects serve as excellent learning
+resources, offering practical examples of how to leverage Next.js 14 and App
+Router to build robust, scalable applications. Whether you are looking to
+enhance your skills, find inspiration, or discover new tools, delving into these
+codebases will undoubtedly contribute to your growth as a developer.
+
+**Want to find more real-world projects?** You can find more projects built with
+different technologies in
+[my collection](https://github.com/stars/lesha1201/lists/real-world-apps) on
+GitHub.
